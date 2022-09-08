@@ -36,18 +36,13 @@ function desencriptar() {
 function mostrar(texto) {
 
     bandera = false;
-    document.getElementById("texto1").style.visibility = "hidden";
-    document.getElementById("texto2").style.visibility = "hidden";
+    document.getElementById("texto1").style.display = "none";
+    document.getElementById("texto2").style.display = "none";
     document.getElementById("muneco").style.visibility = "hidden";
     var parrafo=document.getElementById("respuesta");
     parrafo.innerText=texto;
     parrafo.style.visibility="visible";
-    /*// createElement
-    var elementNode = document.createElement('p');
-    elementNode.id = 'respuesta';
-    elementNode.value = texto;
-
-    document.getElementById("contenido").appendChild(elementNode); */
+    
 
     var copy = document.createElement('input');
     copy.id = "Bcopiar";
@@ -67,9 +62,9 @@ function reinicio() {
     
     var cop = document.getElementById("Bcopiar");
     cop.parentNode.removeChild(Bcopiar);
-    document.getElementById("respuesta").style.visibility="hidden";
-    document.getElementById("texto1").style.visibility = "visible";
-    document.getElementById("texto2").style.visibility = "visible";
+    document.getElementById("respuesta").innerText="";
+    document.getElementById("texto1").style.display = "block";
+    document.getElementById("texto2").style.display = "block";
     document.getElementById("muneco").style.visibility = "visible";
     
 }

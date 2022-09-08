@@ -12,29 +12,31 @@
 
 
 <body>
+    <div class="contenedor">
+        <img src="imagenes\Vector.png" id="logo">
+        <div class="textoEntrada">
+            <textarea name="textoEntrada" id="entrada" placeholder="Ingrese el texto aqui" onfocus="reinicio()"
+            onblur="this.placeholder='Ingrese el texto aqui'"></textarea>
+        </div>
+        
 
-    <img src="imagenes\Vector.png" id="logo">
+        <div id="advertencia">
+            <img src="imagenes\Vector (1).png" alt="">
+            Solo letras minúsculas y sin acentos
+        </div>
 
-    <textarea name="textoEntrada" id="entrada" placeholder="Ingrese el texto aqui" onfocus="reinicio()"
-        onblur="this.placeholder='Ingrese el texto aqui'"></textarea>
+        <div id="botones">
+            <input id="encriptar" type="button" value="Encriptar" onclick="encriptar()">
+            <input id="desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
+        </div>
 
-    <div id="advertencia">
-        <img src="imagenes\Vector (1).png" alt="">
-        Solo letras minúsculas y sin acentos
+        <div id="contenido">
+            <p id="respuesta"></p>
+            <img id="muneco" src="imagenes\Muñeco.png">
+            <div id="texto1">Ningún mensaje fue<br>encontrado</div>
+            <div id="texto2">Ingresa el texto que desees encriptar o<br> desencriptar.</div>
+        </div>
     </div>
-
-    <div id="botones">
-        <input id="encriptar" type="button" value="Encriptar" onclick="encriptar()">
-        <input id="desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
-    </div>
-
-    <div id="contenido">
-        <p id="respuesta"></p>
-        <img id="muneco" src="imagenes\Muñeco.png" >
-        <div id="texto1">Ningún mensaje fue<br>encontrado</div>
-        <div id="texto2">Ingresa el texto que desees encriptar o<br> desencriptar.</div>
-    </div>
-
 
 </body>
 

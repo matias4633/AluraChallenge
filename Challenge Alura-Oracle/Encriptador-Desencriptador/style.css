@@ -1,30 +1,38 @@
 body {
-    position: relative;
+    
     background: #F3F5FC;
     font-size: 16px;
-    ;
-    width: 1440px;
-    height: 1024px;
+    
+    
+}
+.contenedor{
+    position: relative;
+    margin: 0 15%;
+   
     text-align: center;
     margin: auto;
 }
 
-
 #logo {
     position: absolute;
-    left: 84px;
-    top: 40px;
+    left: 4%;
+    top: 2.5rem;
     bottom: 0%;
     width: 31.09px;
     height: 48px;
 }
-
-#entrada {
+.textoEntrada{
     position: absolute;
-    left: 240px;
-    top: 168px;
-    width: 680px;
-    height: 500px;
+    width: 46%;
+    height: 31.25rem;
+    left: 16.5%;
+    top: 10.5rem;
+}
+#entrada {
+   
+    width: 100%;
+    height: 100%;
+    
     border: 0px;
     font-family: 'Inter';
     font-style: normal;
@@ -47,14 +55,15 @@ textarea {
 
 #botones {
     position: absolute;
-    left: 240px;
-    top: 885px;
+    left: 16.5%;
+    top: 55.3125rem;
+    width: 660px;
 }
 
 #advertencia {
     position: absolute;
-    left: 240px;
-    top: 851px;
+    left: 16.5%;
+    top: 53.1875rem;
     width: 205px;
     height: 18px;
 
@@ -66,9 +75,9 @@ textarea {
 }
 
 #encriptar {
-    padding: 24px;
-    width: 328px;
-    height: 67px;
+    padding: 1.5rem;
+    width: 20.5rem;
+    height: 4.1875rem;
     background: #0A3871;
     border-radius: 24px;
     color: white;
@@ -76,9 +85,9 @@ textarea {
 }
 
 #desencriptar {
-    padding: 24px;
-    width: 328px;
-    height: 67px;
+    padding: 1.5rem;
+    width: 20.5rem;
+    height: 4.1875rem;
     background: #D8DFE8;
     border-radius: 24px;
     color: #0A3871;
@@ -87,11 +96,11 @@ textarea {
 
 #Bcopiar {
     position: absolute;
-    top: 845px;
-    left: 32px;
-    padding: 24px;
-    width: 328px;
-    height: 67px;
+    top: 52.8125rem;
+    left: 2rem;
+    padding: 1.5rem;
+    width: 20.5rem;
+    height: 4.1875rem;
     background: white;
     border-radius: 24px;
     border-color: #0A3871;
@@ -100,29 +109,29 @@ textarea {
 
 #contenido {
     position: absolute;
-    top: 40px;
-    left: 1000px;
+    
+    left: 77%;
     border-radius: 32px;
     background-color: white;
-    width: 400px;
-    height: 944px;
+    width: 25rem;
+    height: 59rem;
     text-align: center;
 }
 
 #muneco {
     position: absolute;
-    top: 243px;
-    left: 32px;
-    width: 336px;
-    height: 304px;
+    top: 15.1875rem;
+    left: 2rem;
+    width: 21rem;
+    height: 19rem;
 }
 
 #texto1 {
     position: absolute;
-    width: 336px;
-    height: 58px;
-    top: 579px;
-    left: 32px;
+    width: 21rem;
+    height: 3.625rem;
+    top: 36.1875rem;
+    left: 2rem;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -134,10 +143,10 @@ textarea {
 
 #texto2 {
     position: absolute;
-    width: 336px;
-    height: 48px;
-    top: 653px;
-    left: 32px;
+    width: 21rem;
+    height: 3rem;
+    top: 40.8125rem;
+    left: 2rem;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -148,9 +157,9 @@ textarea {
 }
 
 #respuesta {
-    width: 336px;
+    width: 21rem;
     height: auto;
-    max-height: 781px;
+    max-height: 48.8125rem;
     border: 0px;
     word-wrap: break-word;
 
@@ -165,23 +174,105 @@ textarea {
 
 }
 
-@media (max-width:1200px) {}
+@media (max-width:70.25rem){
+    #contenido{
+        height: 54rem;
+    }
+    #Bcopiar{
+        top: 47.8125rem;
+    }
+}
 
-@media (max-width:992px) {
+@media (max-width:48rem) {
+    .contenedor {
+        
+        width: auto;
+        
+    }
+    #logo {
+        
+        left: 40px;
+        
+    }
+
+    #entrada{
+        left: 40px;
+    }
+    #advertencia {
+        
+        left: 33px;
+        top: 837px;
+    }
+    #botones{
+        left: 40px;
+        top: 870px;
+    }
     #contenido {
         
         top: 1001px;
         left: 40px;
         
-        width: 688px;
+        width: 660px;
         height: auto;
-       
+        
     }
     #muneco{
-        visibility: hidden;
+        display: none;
+    }
+    .textoEntrada{
+        width: 91%;
+        left: 4.5%;
+        
+    }
+    #texto1{
+        position: static;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    #texto2{
+        position: static;
+        width: auto;
+        padding-bottom: 10px;
+    }
+    #Bcopiar{
+        position: static;
+        width: 90%;
+        margin: 1.5em;
+    }
+    #respuesta{
+        width: 90%;
     }
 }
 
-@media (max-width:768px) {}
 
-@media (max-width:576px) {}
+
+@media (max-width:375px) {
+    body{
+        font-size: 32px;
+    }
+    #logo{
+        left: 4.5%;
+
+    }
+    .textoEntrada{
+        left: 4.5%;
+        width: 92%;
+        max-height: 250px;
+    }
+    #advertencia{
+        top: 451px;
+        left: 4.5%;
+
+    }
+    #botones{
+        width: 343px;
+        top: 485px;
+        left: 4.5%;
+
+    }
+    #contenido{
+        width: 327px;
+        top: 707px;
+        left: 24px;
+    }
+}
