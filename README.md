@@ -6,8 +6,6 @@ Encriptador/Desemcriptador en JavaScript
 <br>
 <img src="/final1.png" />
 <br>
-<img src="/final2.png" />
-<br>
 <img src="/final3.png" />
 <br>
 <img src="/final4.png" />
