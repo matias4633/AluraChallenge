@@ -2,13 +2,13 @@ Challenge Alura
 
 Encriptador/Desemcriptador en JavaScript
 
-<img src="/final0" />
+<img src="/final0.png" />
 <br>
-<img src="/final1" />
+<img src="/final1.png" />
 <br>
-<img src="/final2" />
+<img src="/final2.png" />
 <br>
-<img src="/final3" />
+<img src="/final3.png" />
 <br>
-<img src="/final4" />
+<img src="/final4.png" />
 <br>
