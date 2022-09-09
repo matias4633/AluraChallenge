@@ -1,16 +1,51 @@
 body {
-    
+
     background: #F3F5FC;
     font-size: 16px;
-    
-    
+    margin: 0px;
+
 }
-.contenedor{
+
+.contenedor {
     position: relative;
-    margin: 0 15%;
-   
+
+    min-height: 100vh;
     text-align: center;
-    margin: auto;
+
+}
+
+.grupo {
+    position: absolute;
+    left: 20%;
+    top: 10%;
+    width: 50%;
+    height: 88.5%;
+    display: grid;
+
+    grid-template-areas:
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "texto texto texto"
+        "adv adv adv"
+        "boton boton boton";
 }
 
 #logo {
@@ -21,18 +56,17 @@ body {
     width: 31.09px;
     height: 48px;
 }
-.textoEntrada{
-    position: absolute;
-    width: 46%;
-    height: 31.25rem;
-    left: 16.5%;
-    top: 10.5rem;
+
+.textoEntrada {
+
+    grid-area: texto;
 }
+
 #entrada {
-   
+
     width: 100%;
     height: 100%;
-    
+
     border: 0px;
     font-family: 'Inter';
     font-style: normal;
@@ -54,17 +88,28 @@ textarea {
 }
 
 #botones {
-    position: absolute;
-    left: 16.5%;
-    top: 55.3125rem;
-    width: 660px;
+
+    grid-area: boton;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+
+}
+
+#botones input {
+    margin-right: 10px;
+
+}
+
+#botones input:hover {
+    
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
 }
 
 #advertencia {
-    position: absolute;
-    left: 16.5%;
-    top: 53.1875rem;
-    width: 205px;
+
     height: 18px;
 
     font-family: 'Inter';
@@ -72,7 +117,20 @@ textarea {
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
+
+    grid-area: adv;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-end;
 }
+
+#advertencia img {
+    margin: 0 10px;
+}
+
+
 
 #encriptar {
     padding: 1.5rem;
@@ -96,7 +154,7 @@ textarea {
 
 #Bcopiar {
     position: absolute;
-    top: 52.8125rem;
+    bottom: 1.5%;
     left: 2rem;
     padding: 1.5rem;
     width: 20.5rem;
@@ -107,31 +165,38 @@ textarea {
     color: #0A3871;
 }
 
+#Bcopiar:hover{
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.2s ease;
+}
+
 #contenido {
-    position: absolute;
-    
+    position: relative;
+    display: flex;
+    flex-direction: column;
     left: 77%;
     border-radius: 32px;
     background-color: white;
     width: 25rem;
     height: 59rem;
     text-align: center;
+
+    align-items: center;
+    justify-content: space-around;
+    align-content: space-around;
 }
 
 #muneco {
-    position: absolute;
-    top: 15.1875rem;
-    left: 2rem;
+
     width: 21rem;
     height: 19rem;
 }
 
 #texto1 {
-    position: absolute;
+
     width: 21rem;
     height: 3.625rem;
-    top: 36.1875rem;
-    left: 2rem;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -142,11 +207,10 @@ textarea {
 }
 
 #texto2 {
-    position: absolute;
+
     width: 21rem;
     height: 3rem;
-    top: 40.8125rem;
-    left: 2rem;
+
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -174,72 +238,76 @@ textarea {
 
 }
 
-@media (max-width:70.25rem){
-    #contenido{
-        height: 54rem;
-    }
-    #Bcopiar{
-        top: 47.8125rem;
-    }
-}
 
-@media (max-width:48rem) {
+
+@media (max-width:74.625rem) {
     .contenedor {
-        
+
         width: auto;
-        
-    }
-    #logo {
-        
-        left: 40px;
-        
+
     }
 
-    #entrada{
-        left: 40px;
+    #logo {
+
+        left: 6%;
+
     }
+
+    .grupo {
+        left: 6%;
+        top: 14%
+    }
+
     #advertencia {
-        
-        left: 33px;
+
+        left: 6%;
         top: 837px;
     }
-    #botones{
-        left: 40px;
+
+    #botones {
+        left: 6%;
         top: 870px;
     }
+
     #contenido {
-        
-        top: 1001px;
-        left: 40px;
-        
+
+        top: 865px;
+        left: 6.5%;
+
         width: 660px;
         height: auto;
-        
+
     }
-    #muneco{
+
+    #muneco {
         display: none;
     }
-    .textoEntrada{
+
+    .textoEntrada {
         width: 91%;
-        left: 4.5%;
-        
+        left: 6%;
+
     }
-    #texto1{
+
+    #texto1 {
         position: static;
         width: auto;
         padding-bottom: 10px;
     }
-    #texto2{
+
+    #texto2 {
         position: static;
         width: auto;
         padding-bottom: 10px;
     }
-    #Bcopiar{
+
+    #Bcopiar {
         position: static;
         width: 90%;
         margin: 1.5em;
     }
-    #respuesta{
+
+    #respuesta {
         width: 90%;
     }
 }
@@ -247,32 +315,41 @@ textarea {
 
 
 @media (max-width:375px) {
-    body{
+    body {
         font-size: 32px;
     }
-    #logo{
+
+    #logo {
         left: 4.5%;
 
     }
-    .textoEntrada{
+
+    .grupo {
+        height: 63.5%;
+    }
+
+    .textoEntrada {
         left: 4.5%;
         width: 92%;
         max-height: 250px;
     }
-    #advertencia{
+
+    #advertencia {
         top: 451px;
         left: 4.5%;
 
     }
-    #botones{
+
+    #botones {
         width: 343px;
         top: 485px;
         left: 4.5%;
 
     }
-    #contenido{
+
+    #contenido {
         width: 327px;
-        top: 707px;
+        top: 656px;
         left: 24px;
     }
 }
