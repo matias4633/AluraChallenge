@@ -2,13 +2,13 @@ Challenge Alura
 
 Encriptador/Desemcriptador en JavaScript
 
-<img src="/Challenge Alura-Oracle/Encriptador-Desencriptador/imagenes/final0" />
+<img src="/final0" />
 <br>
-<img src="/Challenge Alura-Oracle/Encriptador-Desencriptador/imagenes/final1" />
+<img src="/final1" />
 <br>
-<img src="/Challenge Alura-Oracle/Encriptador-Desencriptador/imagenes/final2" />
+<img src="/final2" />
 <br>
-<img src="/Challenge Alura-Oracle/Encriptador-Desencriptador/imagenes/final3" />
+<img src="/final3" />
 <br>
-<img src="/Challenge Alura-Oracle/Encriptador-Desencriptador/imagenes/final4" />
+<img src="/final4" />
 <br>
