@@ -1,47 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>Encriptador</title>
-</head>
+  </head>
 
-
-<body>
+  <body>
     <div class="contenedor">
-        <img src="imagenes\Vector.png" id="logo">
-        <div class="grupo">
-            <div class="textoEntrada">
-                <textarea name="textoEntrada" id="entrada" placeholder="Ingrese el texto aqui" onfocus="reinicio()"
-                onblur="this.placeholder='Ingrese el texto aqui'"></textarea>
-            </div>
-            
-    
-            <div id="advertencia">
-                <img src="imagenes\Vector (1).png" alt="">
-                letras minúsculas y sin acentos 
-            </div>
-    
-            <div id="botones">
-                <input id="encriptar" type="button" value="Encriptar" onclick="encriptar()">
-                <input id="desencriptar" type="button" value="Desencriptar" onclick="desencriptar()">
-            </div>
+      <img src="imagenes\Vector.png" id="logo" />
+      <div class="grupo">
+        <div class="textoEntrada">
+          <textarea
+            name="textoEntrada"
+            id="entrada"
+            placeholder="Ingrese el texto aqui"
+            onfocus="reinicio()"
+            onblur="this.placeholder='Ingrese el texto aqui'"
+          ></textarea>
         </div>
-        
 
-        <div id="contenido">
-            <p id="respuesta"></p>
-            <img id="muneco" src="imagenes\Muñeco.png">
-            <div id="texto1">Ningún mensaje fue<br>encontrado</div>
-            <div id="texto2">Ingresa el texto que desees encriptar o<br> desencriptar.</div>
+        <div id="botones-contenedor">
+          <div id="advertencia">
+            <img src="imagenes\Vector (1).png" alt="" />
+            letras minúsculas y sin acentos
+          </div>
+          <div class="botones">
+            <input
+                class="button"
+              id="encriptar"
+              type="button"
+              value="Encriptar"
+              onclick="encriptar()"
+            />
+            <input
+            class="button"
+              id="desencriptar"
+              type="button"
+              value="Desencriptar"
+              onclick="desencriptar()"
+            />
+          </div>
         </div>
+      </div>
+
+      <div id="contenido">
+        <p id="respuesta"></p>
+        <img id="muneco" src="imagenes\Muñeco.png" />
+        <div id="texto1">Ningún mensaje fue<br />encontrado</div>
+        <div id="texto2">
+          Ingresa el texto que desees encriptar o<br />
+          desencriptar.
+        </div>
+      </div>
     </div>
-
-</body>
-
-
+  </body>
 </html>

@@ -3,6 +3,7 @@ var bandera = true;
 function encriptar() {
 
     var p = document.getElementById("entrada").value;
+    p=p.toLocaleLowerCase();
     if (bandera && p!="") {
         if (p == p.toLocaleLowerCase()) {
             p = p.replace(/e/g, 'enter');
@@ -38,14 +39,16 @@ function mostrar(texto) {
     bandera = false;
     document.getElementById("texto1").style.display = "none";
     document.getElementById("texto2").style.display = "none";
-    document.getElementById("muneco").style.visibility = "hidden";
+    document.getElementById("muneco").style.display = "none";
     var parrafo=document.getElementById("respuesta");
+    parrafo.style.display='block';
     parrafo.innerText=texto;
     parrafo.style.visibility="visible";
     
 
     var copy = document.createElement('input');
     copy.id = "Bcopiar";
+    copy.className="button";
     copy.value = "Copiar";
     copy.type = "button";
 
@@ -59,13 +62,19 @@ function reinicio() {
     bandera = true;
     var place = document.getElementById('entrada');
     place.placeholder = '';
+    var parrafo= document.getElementById('respuesta');
+    parrafo.style.display='none';
     
     var cop = document.getElementById("Bcopiar");
     cop.parentNode.removeChild(Bcopiar);
     document.getElementById("respuesta").innerText="";
     document.getElementById("texto1").style.display = "block";
     document.getElementById("texto2").style.display = "block";
-    document.getElementById("muneco").style.visibility = "visible";
+    if(innerWidth>=1230){
+        document.getElementById("muneco").style.display = "block";
+    }
+    
+    document.getElementById("entrada").value="";
     
 }
 

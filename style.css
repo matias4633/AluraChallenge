@@ -1,69 +1,33 @@
 body {
-
     background: #F3F5FC;
     font-size: 16px;
     margin: 0px;
-
+    display: flex;
+    justify-content: center;
 }
 
 .contenedor {
-    position: relative;
-
-    min-height: 100vh;
-    text-align: center;
-
-}
-
-.grupo {
-    position: absolute;
-    left: 20%;
-    top: 10%;
-    width: 50%;
-    height: 88.5%;
     display: grid;
-
-    grid-template-areas:
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "texto texto texto"
-        "adv adv adv"
-        "boton boton boton";
+    grid-template-columns: auto 1fr auto;
+    height: 100vh;
+    width: 80%;
 }
-
 #logo {
-    position: absolute;
-    left: 4%;
-    top: 2.5rem;
-    bottom: 0%;
     width: 31.09px;
     height: 48px;
 }
 
-.textoEntrada {
-
-    grid-area: texto;
+.grupo {
+    width: 80%;
+    height: 80%;
+    position: relative;
+    top: 10%;
+    display: grid;
+    grid-template-rows: 90% auto;
 }
 
-#entrada {
 
+#entrada {
     width: 100%;
     height: 100%;
 
@@ -75,7 +39,6 @@ body {
     line-height: 150%;
     color: #0A3871;
     background-color: #F3F5FC;
-
 }
 
 textarea {
@@ -87,41 +50,28 @@ textarea {
     color: #0A3871;
 }
 
-#botones {
-
-    grid-area: boton;
+#botones-contenedor {
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-
-
+    flex-direction: column;
 }
 
-#botones input {
+#botones-contenedor input {
     margin-right: 10px;
-
 }
 
-#botones input:hover {
-    
-    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
-    transition: all 0.2s ease;
+.botones{
+    display: flex;
+    flex-direction: row;
 }
 
 #advertencia {
-
     height: 18px;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
-
-    grid-area: adv;
-
     display: flex;
-
     justify-content: flex-start;
     align-items: flex-end;
 }
@@ -129,74 +79,57 @@ textarea {
 #advertencia img {
     margin: 0 10px;
 }
-
-
-
-#encriptar {
+.button{
     padding: 1.5rem;
     width: 20.5rem;
     height: 4.1875rem;
-    background: #0A3871;
     border-radius: 24px;
+}
+#encriptar {
+    background: #0A3871;
     color: white;
     border-color: #0A3871;
 }
 
 #desencriptar {
-    padding: 1.5rem;
-    width: 20.5rem;
-    height: 4.1875rem;
     background: #D8DFE8;
-    border-radius: 24px;
     color: #0A3871;
     border-color: #0A3871;
 }
 
 #Bcopiar {
-    position: absolute;
-    bottom: 1.5%;
-    left: 2rem;
-    padding: 1.5rem;
-    width: 20.5rem;
-    height: 4.1875rem;
     background: white;
-    border-radius: 24px;
     border-color: #0A3871;
     color: #0A3871;
 }
 
-#Bcopiar:hover{
+.button:hover{
     box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
     transition: all 0.2s ease;
 }
 
 #contenido {
-    position: relative;
     display: flex;
     flex-direction: column;
-    left: 77%;
     border-radius: 32px;
     background-color: white;
     width: 25rem;
-    height: 59rem;
+    height: 95vh;
     text-align: center;
-
     align-items: center;
     justify-content: space-around;
-    align-content: space-around;
+    position: relative;
+    top: 2%;
 }
 
 #muneco {
-
     width: 21rem;
     height: 19rem;
 }
 
 #texto1 {
-
     width: 21rem;
     height: 3.625rem;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
@@ -207,10 +140,8 @@ textarea {
 }
 
 #texto2 {
-
     width: 21rem;
     height: 3rem;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -226,95 +157,53 @@ textarea {
     max-height: 48.8125rem;
     border: 0px;
     word-wrap: break-word;
-
     margin: 5% auto;
-
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
     font-size: 24px;
     line-height: 150%;
-
+    display: none;
 
 }
 
-
-
-@media (max-width:74.625rem) {
-    .contenedor {
-
-        width: auto;
-
+@media (max-width: 1230px){
+    .contenedor{
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
-
-    #logo {
-
-        left: 6%;
-
-    }
-
-    .grupo {
-        left: 6%;
-        top: 14%
-    }
-
-    #advertencia {
-
-        left: 6%;
-        top: 837px;
-    }
-
-    #botones {
-        left: 6%;
-        top: 870px;
-    }
-
-    #contenido {
-
-        top: 865px;
-        left: 6.5%;
-
-        width: 660px;
-        height: auto;
-
-    }
-
-    #muneco {
+    #muneco{
         display: none;
     }
-
-    .textoEntrada {
-        width: 91%;
-        left: 6%;
-
+    .grupo{
+        height: 30%;
+        width: 100%;
     }
-
-    #texto1 {
-        position: static;
-        width: auto;
-        padding-bottom: 10px;
+    #contenido{
+        height: auto;
+        width: 100%;
+        top: 35%;
     }
-
-    #texto2 {
-        position: static;
-        width: auto;
-        padding-bottom: 10px;
+    .button{
+        width: 100%;
     }
-
-    #Bcopiar {
-        position: static;
-        width: 90%;
-        margin: 1.5em;
-    }
-
-    #respuesta {
-        width: 90%;
+    .botones{
+        flex-direction: column;
+        width: 100%;
     }
 }
 
 
+/* @media (max-width: 680px) {
+    #contenido{
+        height: 50vh;
+    }
+} */
 
-@media (max-width:375px) {
+
+
+/* @media (max-width:375px) {
     body {
         font-size: 32px;
     }
@@ -352,4 +241,4 @@ textarea {
         top: 656px;
         left: 24px;
     }
-}
+} */
