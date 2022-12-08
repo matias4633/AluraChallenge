@@ -4,6 +4,7 @@ body {
     margin: 0px;
     display: flex;
     justify-content: center;
+    min-width: 400px;
 }
 
 .contenedor {
@@ -101,6 +102,7 @@ textarea {
     background: white;
     border-color: #0A3871;
     color: #0A3871;
+    margin-bottom: 20px;
 }
 
 .button:hover{
@@ -191,6 +193,7 @@ textarea {
     .botones{
         flex-direction: column;
         width: 100%;
+        gap: 10px;
     }
 }
 
